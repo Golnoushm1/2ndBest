@@ -12,12 +12,22 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for (int i = 100; i >= 0; i--) {
-    Serial.println(i);
-    delay(500);
+  int randomNumber = random(0, 101);
+  Serial.print("Random Number: ");
+  Serial.println(randomNumber);
+  
+  if (randomNumber > 50) {
+    Serial.println("STUPID!");
+  } else if (randomNumber < 50) {
+    Serial.println("EVEN WORSE!!!!! 🤡");
+  } else {
+    Serial.println("Equal to 50");
   }
+  
+  delay(1000);
 }
 
 // put function definitions here:
 int myFunction(int x, int y) {
   return x + y;
+}
